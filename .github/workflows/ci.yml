@@ -9,6 +9,30 @@ on:
   pull_request:
     branches:
       - main
-      - dev
+  workflow_dispatch:
+    
   
 jobs:
+  
+  test:
+    name: run Tests
+    runs-on: ubuntu-latest
+
+    steps:
+
+      # Download code from the github into runner  
+      - name: checkout the code
+        uses: actions/checkout@v4
+
+      # Install python 3.11 on the runner machine
+      - name: Setup python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      # Install Dependencies from the requirements.txt
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt 
+
