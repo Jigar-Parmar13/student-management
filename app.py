@@ -6,7 +6,7 @@ app = Flask(__name__)
 students = [
     {"id": 1, "name": "Aarav Shah", "age": 20, "course": "Computer Science", "grade": "A"},
     {"id": 2, "name": "Priya Patel", "age": 22, "course": "Data Science", "grade": "B+"},
-    {"id": 3, "name": "Rohan Mehta", "age": 21, "course": "Web Development", "grade": "A-"},
+    {"id": 3, "name": "Rohan Mehta", "age": 23, "course": "Web Development", "grade": "A-"},
 ]
 next_id = 4
 
